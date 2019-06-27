@@ -1,0 +1,18 @@
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+
+    &.has-blur {
+        filter: blur(10px);
+        transform: scale(1.1); // Added to hide the blurred white edges that occur when using blur filter
+    }
+
+    &.extend-r {
+        right: -100%;
+    }
+}

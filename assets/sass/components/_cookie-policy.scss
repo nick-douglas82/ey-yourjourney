@@ -1,0 +1,49 @@
+.cookie-policy {
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: #2e2e3a;
+    overflow-y: auto;
+
+    .container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-y: auto;
+        height: auto;
+        padding: 20px;
+
+        @include mq(wide) {
+            padding: 40px 0;
+        }
+
+        .vert-align {
+            padding-bottom: 30px;
+
+            @include mq(wide) {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .button {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    p {
+        margin: 0 0 15px;
+        font-size: 16px;
+        line-height: 1.6;
+
+        a {
+            color: #ffe600 !important;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.preloader {
+    padding: 40px;
+
+    &__wrapper {
+        @include mq($from: tablet) {
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}

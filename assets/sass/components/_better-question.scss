@@ -1,0 +1,114 @@
+.better-question {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq($until: tablet, $and: '(orientation: landscape)') {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    @include mq($from: tablet) {
+        align-items: flex-start;
+    }
+
+    @include mq(wide) {
+        display: block;
+    }
+
+    &__text {
+        font-size: 1.875em;
+        height: 181px;
+        margin-top: -64px;
+        color: $white;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        padding: 0 30px;
+
+        @include mq($until: tablet, $and: '(orientation: landscape)') {
+            font-size: 1.625em;
+            height: 161px;
+            margin-top: -54px;
+        }
+
+        @include mq($from: mobile, $until: desktop, $and: '(-webkit-device-pixel-ratio: 3.5) and (orientation: landscape)') {
+            font-size: 2.07em;
+        }
+
+        @include mq(desktop) {
+            font-size: 1.875em;
+            height: 281px;
+            margin-top: -64px;
+        }
+
+        @include mq(wide) {
+            font-size: 2.6em;
+            // height: 250px;
+            height: 340px;
+            margin-top: -120px;
+            padding: 0 50px;
+        }
+    }
+
+    &__frame {
+        position: relative;
+
+        @include mq($until: tablet) {
+            width: 315px;
+            margin-bottom: 55px;
+        }
+        @include mq($until: tablet, $and: '(orientation: landscape)') {
+            width: 285px;
+            margin-bottom: 28px;
+        }
+
+        @include mq($from: mobile, $until: desktop, $and: '(-webkit-device-pixel-ratio: 3.5) and (orientation: landscape)') {
+            width: 350px;
+        }
+
+        @include mq(desktop) {
+            width: 650px;
+            margin-bottom: 55px;
+        }
+
+        @include mq(wide) {
+            width: 820px;
+        }
+
+        svg {
+            @include mq($until: tablet) {
+                width: 315px;
+                height: auto;
+            }
+
+            @include mq($until: tablet, $and: '(orientation: landscape)') {
+                width: 285px;
+                height: auto;
+            }
+
+            @include mq($from: mobile, $until: desktop, $and: '(-webkit-device-pixel-ratio: 3.5) and (orientation: landscape)') {
+                width: 350px;
+                height: auto;
+            }
+
+            @include mq(desktop) {
+                width: 650px;
+                height: auto;
+            }
+
+            @include mq(wide) {
+                width: 820px;
+                height: auto;
+            }
+        }
+    }
+}
+
+@supports(padding: max(0px)) {
+    .better-question__frame svg {
+        width: 330px;
+        height: auto;
+    }
+}

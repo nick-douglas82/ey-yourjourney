@@ -1,0 +1,64 @@
+.scene {
+    width: 100%;
+    // height: 100vh;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &.overflow-x {
+        overflow-x: scroll;
+    }
+
+    @include mq($until: desktop, $and: '(orientation: landscape)') {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    // @include mq($from: tablet) {
+    //     padding-top: 0;
+    //     padding-bottom: 0;
+    //     padding-right: 0;
+    //     padding-left: 0;
+    // }
+
+    &-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 10;
+
+        @include mq(tablet) {
+            max-width: 967px;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        @include mq($from: mobile, $until: desktop, $and: '(-webkit-device-pixel-ratio: 3.5) and (orientation: landscape)') {
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        @include mq(wide) {
+            max-width: 1300px;
+        }
+    }
+}
+
+@supports(padding: max(0px)) {
+    .scene {
+        padding-left: max(12px, env(safe-area-inset-left)) !important;
+        padding-right: max(12px, env(safe-area-inset-right)) !important;
+        padding-bottom: max(12px, env(safe-area-inset-bottom)) !important;
+        padding-top: 12px !important;
+    }
+}

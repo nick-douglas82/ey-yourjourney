@@ -1,0 +1,52 @@
+[data-ref="introduction-scene-home"],
+[data-ref="introduction-scene-desktop-warning"],
+[data-ref="introduction-scene-intro"] {
+    @include mq($from: tablet) {
+        .site-logo {
+            bottom: 50px;
+            width: 80px;
+
+            img {
+                width: 80px;
+            }
+        }
+    }
+}
+
+[data-ref="navigation-scene-journey-select"],
+[data-ref="navigation-scene-bookmarks"] {
+    @include mq($from: tablet) {
+        .button {
+            bottom: 50px;
+        }
+
+        .site-logo {
+            top: 50px;
+            width: 80px;
+
+            img {
+                width: 80px;
+            }
+        }
+    }
+}
+
+[data-ref="navigation-scene-journey-select"], {
+    @include mq($from: tablet) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .scene-wrapper {
+            height: auto;
+
+            .button {
+                //bottom: 0;
+            }
+        }
+
+        .navigation-slider .slick-arrow {
+            bottom: -50px;
+        }
+    }
+}

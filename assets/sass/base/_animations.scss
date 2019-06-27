@@ -1,0 +1,57 @@
+a,
+.link {
+    transition: all ease-in-out 250ms;
+
+    &:hover {
+        transition: all ease-in-out 250ms;
+    }
+}
+
+.scene-enter-active, .scene-leave-active {
+  transition: opacity 1s ease;
+}
+.scene-enter, .scene-leave-to {
+  opacity: 0;
+}
+
+.scene-enter-to {
+    opacity: 1;
+}
+
+/*****************
+ .better-question
+ ****************/
+.better-question-text {}
+.better-question-text-enter {
+	opacity: 0;
+}
+.better-question-text-enter-active {
+	transition: opacity 1s 2.5s;
+}
+.better-question-text-enter-to {}
+.better-question-text-leave {}
+.better-question-text-leave-active {
+	transition: opacity 0.5s ;
+}
+.better-question-text-leave-to {
+	opacity: 0;
+}
+
+/*****************
+ Fade
+ ****************/
+.fade {}
+.fade-enter {
+	opacity: 0;
+}
+.fade-enter-active {
+	transition: opacity 0.5s;
+}
+.fade-enter-to {}
+.fade-leave {}
+.fade-leave-active {
+	transition: opacity 0.5s ;
+}
+.fade-leave-to {
+	opacity: 0;
+}

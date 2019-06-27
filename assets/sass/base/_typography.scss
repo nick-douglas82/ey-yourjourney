@@ -1,0 +1,18 @@
+a {
+    display: inline-block;
+}
+
+strong {
+    @extend .font-EYInterstate-Bold;
+}
+
+.video-js .vjs-text-track-display div {
+    font-family: "EYInterstate-Light" !important;
+    display: block !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+
+    @include mq($from: tablet) {
+        font-size: 20px !important;
+    }
+}
